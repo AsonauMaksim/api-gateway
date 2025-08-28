@@ -17,6 +17,8 @@ public class SecurityConfig {
                 .authorizeExchange(ex -> ex.anyExchange().permitAll())
                 .build();
     }
+}
+
 
 //    @Bean
 //    public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
@@ -34,4 +36,3 @@ public class SecurityConfig {
 //                );
 //        return http.build();
 //    }
-}

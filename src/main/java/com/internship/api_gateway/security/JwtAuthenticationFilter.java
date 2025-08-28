@@ -33,6 +33,7 @@ public class JwtAuthenticationFilter implements GlobalFilter {
             "/api/auth/login",
             "/api/auth/register",
             "/api/auth/refresh",
+            "/api/auth/logout",
             "/api/register"
     );
 
