@@ -13,9 +13,6 @@ jobs:
   build:
     name: Build (skip tests)
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: api-gateway
 
     steps:
       - name: Checkout code
@@ -35,9 +32,6 @@ jobs:
     name: SonarCloud Analysis
     runs-on: ubuntu-latest
     needs: build
-    defaults:
-      run:
-        working-directory: api-gateway
 
     steps:
       - name: Checkout code
