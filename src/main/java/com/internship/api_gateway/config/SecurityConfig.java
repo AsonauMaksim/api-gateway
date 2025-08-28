@@ -18,21 +18,3 @@ public class SecurityConfig {
                 .build();
     }
 }
-
-
-//    @Bean
-//    public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
-//
-//        http
-//                .csrf(ServerHttpSecurity.CsrfSpec::disable)
-//                .authorizeExchange(exchanges -> exchanges
-//                        .pathMatchers(
-//                                "/api/auth/login",
-//                                "/api/auth/register",
-//                                "/api/auth/refresh",
-//                                "/api/register"
-//                        ).permitAll()
-//                        .anyExchange().authenticated()
-//                );
-//        return http.build();
-//    }
