@@ -33,6 +33,16 @@ services:
   user-service:
     url: ${USER_SERVICE_URI:http://localhost:8081}
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
 logging:
   level:
     root: INFO
