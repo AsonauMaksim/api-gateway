@@ -48,6 +48,10 @@ public class JwtAuthenticationFilter implements GlobalFilter {
         ServerHttpRequest request = exchange.getRequest();
         String path = request.getPath().value();
 
+        if (path.startsWith("/actuator")) {
+            return chain.filter(exchange);
+        }
+
         if (publicPaths.stream().anyMatch(path::startsWith)) {
             return chain.filter(exchange);
         }
